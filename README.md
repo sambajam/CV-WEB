@@ -167,3 +167,19 @@ curl -I http://localhost:8082/style.css
 curl -I http://localhost:8082/script.js
 curl -I http://localhost:8082/images/profile.jpg
 curl -I http://localhost:8082/cv_Jamerson_2016_English.pdf
+
+
+===================================================================
+
+Ativar o GitHub Pages:
+
+
+1. Abra o repositório meu-portfolio no GitHub.
+2. Entre em Settings.
+3. No menu lateral, clique em Pages.
+4. Na seção Build and deployment, selecione Deploy from a branch.
+5. Em Branch, selecione main.
+6. Em Folder, selecione /(root).
+7. Clique em Save.
+Aguarde a publicação. O endereço deverá ser parecido com:
+https://SEU_USUARIO.github.io/meu-portfolio/
