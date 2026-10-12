@@ -40,4 +40,130 @@ ARIA (aria-*): atributos que dão informação extra a leitores de tela.
 ========================================================================
 
 
-# CV-WEB
+# CV - WEB - DOCKER
+
+meu-portfolio/
+├── index.html
+├── style.css
+├── script.js
+├── cv-english.pdf
+├── cv-svenska.pdf
+├── images/
+│   └── profile.jpg
+├── Dockerfile
+├── docker-compose.yml
+└── .dockerignore
+
+================================
+Dockerfile
+===================================
+FROM nginx:alpine
+
+# Remove the default Nginx welcome page
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy the portfolio files into Nginx's web directory
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
+COPY images/ /usr/share/nginx/html/images/
+
+# Copy CV files if they exist in the project root
+COPY cv-*.pdf /usr/share/nginx/html/
+
+EXPOSE 80
+
+================================
+
+Como funciona:
+- FROM nginx:alpine: utiliza uma imagem oficial do Nginx baseada no Alpine Linux, que é leve.
+- RUN: remove a página de boas-vindas padrão do Nginx.
+- COPY: copia os arquivos do seu computador para dentro da imagem.
+- EXPOSE 80: documenta a porta HTTP usada pelo servidor dentro do contêiner.
+
+
+========================
+
+docker-compose.yml
+
+=======================
+
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meu-portfolio
+    ports:
+      - "8082:80"
+    restart: unless-stopped
+
+==============================================
+
+Explicação das configurações:
+
+Configuração	Significado
+build	Constrói a imagem usando seu Dockerfile.
+container_name	Define o nome do contêiner.
+8080:80	Encaminha a porta 8080 do Mac para a porta 80 do contêiner.
+restart: unless-stopped	Reinicia o contêiner automaticamente após uma falha ou reinicialização do Docker, exceto quando você o tiver parado manualmente.
+
+==================================================
+
+.dockerignore
+
+==================================================
+
+.git
+.DS_Store
+.vscode/
+node_modules/
+.env
+
+===================================================
+
+Isso ajuda a evitar arquivos desnecessários e reduz o risco de incluir configurações locais ou arquivos com segredos na imagem.
+
+===================================================
+
+Construir a imagem e iniciar o serviço:
+
+docker compose up -d --build
+
+
+=====================================
+
+Verificar se o contêiner está funcionando:
+
+docker compose ps
+
+====================================
+
+Verificar os logs do Nginx:
+
+docker compose logs --tail=50 portfolio
+
+==========================================
+
+Acessar:
+
+http://localhost:8082
+
+
+============================================
+
+Apos mudancas:
+
+docker compose up -d --build
+
+
+============================================
+Depois de iniciar a aplicação:
+
+curl -I http://localhost:8082
+
+curl -I http://localhost:8082/style.css
+curl -I http://localhost:8082/script.js
+curl -I http://localhost:8082/images/profile.jpg
+curl -I http://localhost:8082/cv_Jamerson_2016_English.pdf

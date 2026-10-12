@@ -1,0 +1,10 @@
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meu-cv-web
+    ports:
+      - "8082:80"
+    restart: unless-stopped
