@@ -1,0 +1,520 @@
+```html
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jamerson Goncalo | Web Developer & Cloud Engineer Student</title>
+
+  <meta
+    name="description"
+    content="Personal portfolio of Jamerson Goncalo, a Web Developer and Cloud Engineer student. Explore my skills, projects, and contact information."
+  >
+
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Link para pular diretamente ao conteúdo principal -->
+  <a class="skip-link" href="#conteudo">
+    Skip to main content
+  </a>
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="logo" href="#inicio">
+        Jamerson Goncalo
+      </a>
+
+      <!-- Menu para telas pequenas -->
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+
+      <nav
+        id="menu-principal"
+        class="nav"
+        aria-label="Main navigation"
+      >
+        <ul class="nav-list">
+          <li><a href="#inicio">Home</a></li>
+          <li><a href="#habilidades">Skills</a></li>
+          <li><a href="#projetos">Projects</a></li>
+          <li><a href="#contato">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão de tema: os IDs são utilizados pelo script.js -->
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Switch to dark mode"
+      >
+        <span id="theme-icon" aria-hidden="true">🌙</span>
+        <span id="theme-label">Dark Mode</span>
+      </button>
+
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- APRESENTAÇÃO -->
+    <section
+      id="inicio"
+      class="section hero"
+      aria-labelledby="titulo-inicio"
+    >
+      <div class="container">
+
+        <p class="eyebrow">Hello, I'm</p>
+
+        <h1 id="titulo-inicio">
+          Jamerson Goncalo
+        </h1>
+
+        <p class="subtitle">
+          Web Developer & Cloud Engineer Student
+        </p>
+
+        <p class="lead">
+          I'm currently studying Web Development and Cloud Engineering,
+          building my skills in creating fast, responsive, and accessible
+          websites. My strongest tools and skills include HTML, CSS,
+          JavaScript, Vibe Coding, Git, and GitHub, along with Linux,
+          Docker, cloud technologies, and automation. I enjoy turning
+          ideas into real-world projects, exploring new technologies,
+          and continuously improving my skills through hands-on learning
+          and practical projects.
+        </p>
+
+        <div class="hero-actions">
+  <a class="btn btn-primary" href="#projetos">
+    See projects
+  </a>
+
+  <a class="btn btn-secondary" href="#contato">
+    Contact me
+  </a>
+</div>
+
+<br>
+
+<div class="cv-actions">
+  <h2>My CV</h2>
+
+  <p>
+    Choose a language to view or download my CV.
+  </p>
+
+  <label for="cv-language">CV language</label>
+
+  <select id="cv-language">
+    <option value="en">English</option>
+    <option value="sv">Svenska</option>
+  </select>
+  
+
+
+  <div class="cv-buttons">
+
+<br> 
+
+    <a
+      class="btn btn-secondary"
+      id="view-cv"
+      href="Jamerson-Goncalo-CV-English.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View CV
+    </a>
+
+    <a
+      class="btn btn-primary"
+      id="download-cv"
+      href="Jamerson-Goncalo-CV-English.pdf"
+      download="Jamerson-Goncalo-CV-English.pdf"
+    >
+      Download CV
+    </a>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section
+      id="habilidades"
+      class="section"
+      aria-labelledby="titulo-habilidades"
+    >
+      <div class="container">
+
+        <h2 id="titulo-habilidades">Skills</h2>
+
+        <p class="section-intro">
+          Technologies and competencies I am developing.
+        </p>
+
+        <ul class="grid skills">
+
+          <li class="card">
+            <h3>HTML</h3>
+            <p>Structure and semantics of web pages.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 40%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>CSS</h3>
+            <p>Layout, colors, and responsive design.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 35%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>JavaScript</h3>
+            <p>Interactivity and programming logic.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 25%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Accessibility</h3>
+            <p>Building websites that everyone can use.</p>
+            <p class="level">Level: Learning</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 30%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Problem Solving</h3>
+            <p>Breaking complex problems into manageable steps.</p>
+            <p class="level">Level: In Progress</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 50%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Vibe Coding</h3>
+            <p>Using AI-assisted coding while reviewing and understanding the code.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Microsoft Azure | AWS</h3>
+            <p>Cloud platforms for deployment and infrastructure management.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Linux | Windows | Windows Server</h3>
+            <p>Operating systems for development, administration, and deployment.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Hyper-V | Docker | Docker Hub</h3>
+            <p>Virtualization and containerization technologies.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Python | Bash | PowerShell</h3>
+            <p>Programming and scripting for automation.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Git | GitHub</h3>
+            <p>Version control and collaborative development.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+          <li class="card">
+            <h3>Cybersecurity</h3>
+            <p>Fundamentals of protecting systems and networks from digital threats.</p>
+            <p class="level">Level: Beginner</p>
+            <div class="bar" aria-hidden="true">
+              <span style="width: 45%"></span>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section
+      id="projetos"
+      class="section"
+      aria-labelledby="titulo-projetos"
+    >
+      <div class="container">
+
+        <h2 id="titulo-projetos">Projects</h2>
+
+        <p class="section-intro">
+          Some projects and ideas. More projects will be added as they develop.
+        </p>
+
+        <div class="grid projects">
+
+          <article class="card project">
+            <h3>Personal Portfolio</h3>
+
+            <p>
+              This website, built with HTML, CSS, and JavaScript,
+              featuring light and dark themes and a contact form.
+            </p>
+
+            <ul class="tags" aria-label="Technologies used">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+
+            <p class="status">In Progress</p>
+          </article>
+
+          <article class="card project">
+            <h3>Task List</h3>
+
+            <p>
+              A simple application for adding, completing, and removing daily tasks.
+            </p>
+
+            <ul class="tags" aria-label="Technologies used">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+
+            <p class="status">Coming Soon</p>
+          </article>
+
+          <article class="card project">
+            <h3>Calculator</h3>
+
+            <p>
+              A basic calculator for practicing JavaScript events,
+              functions, and user input.
+            </p>
+
+            <ul class="tags" aria-label="Technologies used">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+
+            <p class="status">Coming Soon</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- CONTATO -->
+    <section
+      id="contato"
+      class="section"
+      aria-labelledby="titulo-contato"
+    >
+      <div class="container contact">
+
+        <h2 id="titulo-contato">Contact</h2>
+
+        <p class="section-intro">
+          Let's talk! Fill out the form and your email application
+          should open with your message ready to review and send.
+        </p>
+
+        <!--
+          O formulário é processado pelo script.js.
+          O método mailto abre o aplicativo de e-mail do visitante.
+          Não é necessário adicionar action ou method aqui.
+        -->
+        <form id="contact-form" novalidate>
+
+          <div class="field">
+            <label for="nome">Name</label>
+
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              placeholder="Your name"
+              title="Your name"
+              required
+              aria-describedby="erro-nome"
+            >
+
+            <p
+              class="error"
+              id="erro-nome"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="Your email"
+              title="Your email"
+              required
+              aria-describedby="erro-email"
+            >
+
+            <p
+              class="error"
+              id="erro-email"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Message</label>
+
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              placeholder="Your message"
+              title="Your message"
+              required
+              aria-describedby="erro-mensagem"
+            ></textarea>
+
+            <p
+              class="error"
+              id="erro-mensagem"
+              aria-live="polite"
+            ></p>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Send Message
+          </button>
+
+          <p
+            class="form-status"
+            id="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <p>
+        &copy; <span id="ano">2026</span> Jamerson Goncalo.
+        Made with HTML, CSS, JavaScript, Vibe Coding, and VS Code.
+      </p>
+
+      <p>
+        LinkedIn:
+        <a
+          href="https://www.linkedin.com/in/jamerson-goncalo-749a9b147"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jamerson-Goncalo
+        </a>
+      </p>
+
+      <p>
+        GitHub:
+        <a
+          href="https://github.com/sambajam"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          sambajam
+        </a>
+      </p>
+
+      <p>
+        CV | Resume:
+        <a
+          href="CV_Jamerson_2026_Svenska.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View PDF (Svenska)
+        </a>
+
+        <a
+          href="CV_Jamerson_2026_English.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View PDF (English)
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
+```
