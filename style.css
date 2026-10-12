@@ -366,3 +366,57 @@ textarea:hover { border-color: var(--text-muted); }
   }
   .card:hover { transform: none; }
 }
+
+
+
+
+/* ---------- 13. Imagens - commit 2 ---------- */
+
+
+/* Hero section with profile photo */
+
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile and tablet layout */
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-image {
+    grid-row: 1;
+  }
+
+  .hero-image img {
+    max-width: 240px;
+    border-radius: 20px;
+  }
+}
