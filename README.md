@@ -181,5 +181,13 @@ Ativar o GitHub Pages:
 5. Em Branch, selecione main.
 6. Em Folder, selecione /(root).
 7. Clique em Save.
+
 Aguarde a publicação. O endereço deverá ser parecido com:
-https://SEU_USUARIO.github.io/meu-portfolio/
+
+https://sambajam.github.io/CV-WEB/
+
+=====================================================
+
+MICROSOFT AZURE: Static Web App
+
+=====================================================
